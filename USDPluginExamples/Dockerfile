@@ -7,7 +7,7 @@ FROM ${ASWF_PKG_ORG}/ci-vfxall:${VFXPLATFORM_VERSION} as ci-vfxall
 
 # Clone and build USDPluginExamples.
 ARG USDPLUGINEXAMPLES_ROOT=/usr/local/USDPluginExamples
-RUN git clone https://github.com/moddyz/USDPluginExamples.git ${USDPLUGINEXAMPLES_ROOT}
+RUN git clone https://github.com/wetadigital/USDPluginExamples.git ${USDPLUGINEXAMPLES_ROOT}
 RUN mkdir ${USDPLUGINEXAMPLES_ROOT}/_build
 WORKDIR ${USDPLUGINEXAMPLES_ROOT}/_build
 RUN cmake -DUSD_ROOT="/usr/local" \
